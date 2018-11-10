@@ -19,10 +19,10 @@ class ImageShare {
       final Uint8List list = bytes.buffer.asUint8List();
 
       final tempDir = await getTemporaryDirectory();
-      final file = await new File('${tempDir.path}/image.jpg').create();
+      final file = await new File('${tempDir.path}/image.png').create();
       file.writeAsBytesSync(list);
 
-      _channel.invokeMethod('shareFile', 'image.jpg');
+      _channel.invokeMethod('shareFile', 'image.png');
     } catch (e) {
       print('Share error: $e');
     }
