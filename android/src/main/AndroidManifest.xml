@@ -3,7 +3,7 @@
     <application>
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="fr.jonmlk.image_share"
+            android:authorities="{applicationId}.image_share"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

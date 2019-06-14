@@ -1,6 +1,6 @@
 name: image_share
 description: A plugin to share an image using the system actions from your Flutter app.
-version: 0.0.2
+version: 0.1.0
 author: Jonathan Mlynarczyk<jon.mly@gmail.com>
 homepage: https://github.com/jon-mly/flutter_image_share
 
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  path_provider: ^0.4.1
+  path_provider: ^1.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
