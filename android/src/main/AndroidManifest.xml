@@ -3,7 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools">
     <application>
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="{applicationId}.image_share"
             android:exported="false"
             android:grantUriPermissions="true"

@@ -1,3 +1,9 @@
+## 0.1.0+3
+
+  - **Breaking change**. Migrated dependencies from the deprecated original Android Support Library to AndroidX.
+ This shouldn't result in any functional changes, but it requires any Android apps using this plugin to also migrate if 
+ they're using the original support library.
+
 ## 0.1.0+2
 
   - fixing problem with Manifest merger relative to the authorities of FileProvider
@@ -8,11 +14,9 @@
 
 ## 0.1.0
 
-  - **Breaking change**. Migrated dependencies from the deprecated original Android Support Library to AndroidX.
- This shouldn't result in any functional changes, but it requires any Android apps using this plugin to also migrate if 
- they're using the original support library.
   - Fixed a problem relative to the unique provider that prevented the plugin to be usable on multiple apps on the same
   device.
+  - Changed `path_provider` to `1.1.0`.
 
 ## 0.0.2
 
