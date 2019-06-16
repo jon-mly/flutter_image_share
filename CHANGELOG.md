@@ -1,3 +1,7 @@
+## 0.1.0+1
+
+  - Reverted `path_provider` to `0.5.0` to avoid dependency conflict, since `1.1.0` is not adopted yet by other plugins.
+
 ## 0.1.0
 
   - **Breaking change**. Migrated dependencies from the deprecated original Android Support Library to AndroidX.
