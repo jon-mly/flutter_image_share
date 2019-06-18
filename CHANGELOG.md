@@ -1,3 +1,7 @@
+## 0.1.0+4
+
+- Fixed a problem relative to the declaration of <provider> in `AndroidManifest.xml`
+
 ## 0.1.0+3
 
   - **Breaking change**. Migrated dependencies from the deprecated original Android Support Library to AndroidX.

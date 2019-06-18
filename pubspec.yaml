@@ -1,6 +1,6 @@
 name: image_share
 description: A plugin to share an image using the system actions from your Flutter app.
-version: 0.1.0+2
+version: 0.1.0+4
 author: Jonathan Mlynarczyk<jon.mly@gmail.com>
 homepage: https://github.com/jon-mly/flutter_image_share
 
