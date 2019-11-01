@@ -10,9 +10,7 @@
 }
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
-  if ([@"getPlatformVersion" isEqualToString:call.method]) {
-    result([@"iOS " stringByAppendingString:[[UIDevice currentDevice] systemVersion]]);
-  } else if ([@"shareFile" isEqualToString:call.method]) {
+  if ([@"shareFile" isEqualToString:call.method]) {
       UIViewController* controller = [UIApplication sharedApplication].keyWindow.rootViewController;
       [self shareFile:[call arguments] withController:controller];
   } else {

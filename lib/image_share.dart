@@ -8,23 +8,14 @@ import 'package:path_provider/path_provider.dart';
 class ImageShare {
   static const MethodChannel _channel = const MethodChannel('image_share');
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
+  static Future<void> shareImage({@required String filePath}) async {
+    final ByteData bytes = await rootBundle.load(filePath);
+    final Uint8List list = bytes.buffer.asUint8List();
+    final fileName = 'shared_' + filePath.split('/').last;
+    final tempDir = await getTemporaryDirectory();
+    final file = await new File('${tempDir.path}/$fileName').create();
+    file.writeAsBytesSync(list);
 
-  static Future<void> shareImage({@required filePath}) async {
-    try {
-      final ByteData bytes = await rootBundle.load(filePath);
-      final Uint8List list = bytes.buffer.asUint8List();
-
-      final tempDir = await getTemporaryDirectory();
-      final file = await new File('${tempDir.path}/image.png').create();
-      file.writeAsBytesSync(list);
-
-      _channel.invokeMethod('shareFile', 'image.png');
-    } catch (e) {
-      print('Share error: $e');
-    }
+    _channel.invokeMethod('shareFile', '$fileName');
   }
 }
